@@ -1,3 +1,31 @@
+/* Íconos dispositivos marrón fuerte */
+.devices-showcase i, .device-wrapper i, .ventaja-icon i {
+    color: var(--brown) !important;
+}
+/* --- Botón elegante universal para todos los botones --- */
+.carousel-btn, .contact-buttons .cta-btn.whatsapp, .tablet-button, .phone-button, button {
+    border: 3px solid var(--taupe);
+    border-radius: 40px;
+    background-color: transparent;
+    color: var(--taupe);
+    padding: 12px 32px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-btn:hover, .contact-buttons .cta-btn.whatsapp:hover, button:hover {
+    background-color: var(--taupe);
+    color: var(--white);
+    border-color: var(--taupe);
+}
 /* Reset y Variables - Paleta Elegante Minimalista */
 * {
     margin: 0;
@@ -13,8 +41,8 @@
     --beige-dark: #d4c4b5;
     --blush: #e8d5d0;
     --blush-light: #f2e6e3;
-    --rose: #d4a9a3;
-    --rose-dark: #c49991;
+    --rose: #e1604e;
+    --rose-dark: #d27766;
     --taupe: #9a8b7c;
     --brown: #6b5b4f;
     --dark: #3d3532;
@@ -55,7 +83,11 @@ h1, h2, h3 {
 .section-tag {
     display: inline-block;
     background: transparent;
-    color: var(--taupe);
+        color: #fff;
+        font-weight: 700;
+        font-size: 2.2rem;
+        letter-spacing: 3px;
+        text-shadow: 0 2px 12px rgba(0,0,0,0.18);
     padding: 8px 0;
     font-size: 11px;
     font-weight: 500;
@@ -73,11 +105,11 @@ h1, h2, h3 {
     font-size: 3rem;
     font-weight: 300;
     margin-bottom: 15px;
-    color: var(--dark);
+    color: #2a1d13;
 }
 
 .section-header p {
-    color: var(--taupe);
+    color: #2a1d13;
     font-size: 1rem;
     font-weight: 300;
     max-width: 550px;
@@ -110,7 +142,7 @@ h1, h2, h3 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.8rem;
     font-weight: 400;
-    text-decoration: none;
+    text-decoration: underline;
     color: var(--dark);
     letter-spacing: 0.05em;
 }
@@ -132,7 +164,7 @@ h1, h2, h3 {
 }
 
 .nav-link:hover {
-    color: var(--rose-dark);
+    color: #c49991;
 }
 
 .nav-link.whatsapp-btn {
@@ -220,7 +252,8 @@ h1, h2, h3 {
     letter-spacing: 3px;
     text-transform: uppercase;
     margin-bottom: 25px;
-    color: var(--taupe);
+    color: #c49991;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.18);
 }
 
 .slide-content h1 {
@@ -235,7 +268,9 @@ h1, h2, h3 {
 .slide-content h1 .highlight {
     color: var(--rose-dark);
     font-style: italic;
-    background: none;
+        color: #a38954;
+        font-weight: 700;
+        font-size: 3.2rem;
     -webkit-text-fill-color: var(--rose-dark);
 }
 
@@ -251,21 +286,23 @@ h1, h2, h3 {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: var(--dark);
-    color: var(--white);
+    background: transparent;
+    color: var(--beige);
+    border: 2px solid var(--beige);
     padding: 16px 35px;
-    border-radius: 0;
+    border-radius: 40px;
     text-decoration: none;
     font-weight: 500;
     font-size: 0.8rem;
     letter-spacing: 2px;
     text-transform: uppercase;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .cta-btn:hover {
-    background: var(--brown);
-    transform: translateY(-2px);
+    background: var(--beige);
+    color: var(--white);
+    border-color: var(--beige);
 }
 
 .slide-image {
@@ -389,7 +426,7 @@ h1, h2, h3 {
     padding: 45px 30px;
     text-align: center;
     transition: all 0.4s ease;
-    border: 1px solid transparent;
+    border: 1.5px solid var(--beige);
 }
 
 .ventaja-card:hover {
@@ -419,7 +456,7 @@ h1, h2, h3 {
 
 .ventaja-icon i {
     font-size: 1.5rem;
-    color: var(--rose-dark);
+    color: var(--brown);
 }
 
 .ventaja-card h3 {
@@ -441,8 +478,8 @@ h1, h2, h3 {
 .phone-section {
     padding: 120px 0;
     background: linear-gradient(180deg, var(--beige) 0%, var(--cream) 100%);
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
 }
 
 .phone-section::before {
@@ -454,6 +491,41 @@ h1, h2, h3 {
     bottom: 0;
     background: radial-gradient(ellipse at center bottom, rgba(212, 169, 163, 0.15) 0%, transparent 60%);
     pointer-events: none;
+}
+
+.devices-bg {
+    position: absolute;
+    inset: 0;
+    width: 100vw;
+    height: 100%;
+    min-height: 500px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.devices-bg-img {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    position: absolute;
+    inset: 0;
+    filter: brightness(1) contrast(1.05);
+}
+
+.devices-bg-blur {
+    position: absolute;
+    inset: 0;
+    width: 100vw;
+    height: 100%;
+    background: rgba(255,255,255,0.38);
+    backdrop-filter: blur(22px);
+    z-index: 1;
+}
+
+.phone-section > .container {
+    position: relative;
+    z-index: 2;
 }
 
 .phone-section .section-header {
@@ -960,12 +1032,29 @@ h1, h2, h3 {
     margin-bottom: 45px;
 }
 
+
 .contact-buttons .cta-btn.whatsapp {
-    background: var(--dark);
+    border: 3px solid var(--taupe);
+    border-radius: 40px !important;
+    background-color: transparent;
+    color: var(--taupe);
+    padding: 12px 32px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .contact-buttons .cta-btn.whatsapp:hover {
-    background: var(--brown);
+    background-color: var(--taupe);
+    color: var(--white);
+    border-color: var(--taupe);
 }
 
 .contact-details {
@@ -1097,6 +1186,41 @@ h1, h2, h3 {
 .whatsapp-float:hover {
     background: var(--whatsapp);
     transform: translateY(-3px);
+}
+
+/* Banner con superposición semitransparente y texto grande */
+.banner-foto-mia {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  margin: 40px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+.banner-foto-mia img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.banner-foto-mia .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.35);
+}
+.banner-foto-mia .banner-text {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  z-index: 2;
 }
 
 /* Responsive - Elegante */
@@ -1305,4 +1429,64 @@ h1, h2, h3 {
         padding: 30px 15px;
         font-size: 0.75rem;
     }
+}
+
+/* Sección Responsiva con Imagen de Fondo */
+.responsive-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.responsive-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('img/foto-mia.png') center/cover no-repeat;
+    filter: none;
+    opacity: 1;
+  z-index: 0;
+}
+
+.responsive-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+.image-wrapper img {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+    border-radius: 18px;
+}
+
+/* Nuevos Estilos Sugeridos */
+.card {
+  border: 2px solid #a38954;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    border: 3px solid var(--taupe);
+    border-radius: 40px;
+    background-color: transparent;
+    color: var(--taupe);
+    padding: 12px 32px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: none;
+}
+
+button:hover {
+    background-color: var(--taupe);
+    color: var(--white);
 }
