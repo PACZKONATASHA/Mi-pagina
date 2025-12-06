@@ -1,3 +1,22 @@
+/* Imágenes del carrusel responsivas y centradas */
+.slide-image img {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media only screen and (max-width: 768px) {
+    .slide-image {
+        width: 100%;
+        text-align: center;
+    }
+    .slide-image img {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+}
 /* Carrusel principal imagen centrada y responsiva */
 .carrusel-principal img {
     margin: 0 auto;
