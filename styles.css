@@ -1,3 +1,31 @@
+/* Carrusel principal imagen centrada y responsiva */
+.carrusel-principal img {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media only screen and (max-width: 768px) {
+    .image-container {
+        width: 100%;
+    }
+}
+
+/* Mostrar solo la slide activa */
+.carousel-slide {
+    display: none;
+}
+.carousel-slide.active {
+    display: grid;
+}
+/* Mostrar solo la slide activa */
+.carousel-slide {
+    display: none;
+}
+.carousel-slide.active {
+    display: grid;
+}
 /* Íconos dispositivos marrón fuerte */
 .devices-showcase i, .device-wrapper i, .ventaja-icon i {
     color: var(--brown) !important;
@@ -143,7 +171,8 @@ h1, h2, h3 {
     font-size: 1.8rem;
     font-weight: 400;
     text-decoration: underline;
-    color: var(--dark);
+    color: #bfa76a;
+    text-shadow: none;
     letter-spacing: 0.05em;
 }
 
@@ -207,29 +236,66 @@ h1, h2, h3 {
 
 .carousel-container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 0 20px;
     position: relative;
+    overflow: hidden;
 }
 
-.carousel-slides {
-    position: relative;
-    min-height: 500px;
+
+.carousel {
+    display: flex;
+    transition: transform 0.4s cubic-bezier(.4,0,.2,1);
+    will-change: transform;
 }
 
-.carousel-slide {
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.carousel-prev,
+.carousel-next {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.8s ease, visibility 0.8s;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #A08C5B;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0.85;
+    transition: background 0.2s;
+}
+.carousel-prev { left: 10px; }
+.carousel-next { right: 10px; }
+.carousel-prev:hover,
+.carousel-next:hover { background: #8B7355; }
+
+@media (max-width: 768px) {
+  .carousel-item {
+    min-width: 100%;
+    padding: 0 2px;
+  }
+  .carousel-prev,
+  .carousel-next {
+    width: 32px;
+    height: 32px;
+    font-size: 1.1rem;
+  }
 }
 
 .carousel-slide.active {
